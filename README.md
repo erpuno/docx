@@ -1,5 +1,9 @@
 # DOCX Template Processor
 
+## Motivation
+
+The goal was to build simple command line DOCX template processor that can be used from other than .NET platforms.
+
 ## Install .NET Core 3.1
 
 Download `https://dot.net/v1/dotnet-install.sh` and then
