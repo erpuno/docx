@@ -4,15 +4,18 @@
 
 The goal was to build simple command line DOCX template processor that can be used from other than .NET platforms.
 
-## Install .NET Core 3.1
+## Install .NET Core SDK 3.1.105
 
-Download `https://dot.net/v1/dotnet-install.sh` and then
+On Linix download `https://dot.net/v1/dotnet-install.sh` and then
 
 ```
 $ ./dotnet-install.sh -c Current
 ```
 
-Put into your `~/.profile` the following
+On Windows and Mac please refer to corresponding packages
+from https://dotnet.microsoft.com/download/dotnet-core/3.1
+
+Then put into your `~/.profile` the following
 
 ```
 export DOTNET_ROOT=$HOME/.dotnet
