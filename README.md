@@ -68,8 +68,8 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
   Determining projects to restore...
   Restored /home/maxim/depot/synrc/fsharp/docx/docx.fsproj (in 767 ms).
-  TemplateEngine.Docx -> /home/maxim/depot/synrc/fsharp/docx/bin/Debug/netcoreapp3.1/TemplateEngine.Docx.dll
-  Successfully created package '/home/maxim/depot/synrc/fsharp/docx/bin/Debug/TemplateEngine.Docx.1.0.0.nupkg'.
+  Docx -> /home/maxim/depot/synrc/fsharp/docx/bin/Debug/netcoreapp3.1/Docx.dll
+  Successfully created package '/home/maxim/depot/synrc/fsharp/docx/bin/Debug/Docx.1.0.0.nupkg'.
   docx -> /home/maxim/depot/synrc/fsharp/docx/bin/Debug/netcoreapp3.1/docx.dll
 
 Build succeeded.
