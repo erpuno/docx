@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="TemplateEngine.Docx.csproj"/>
+    <PackageReference Include="TemplateEngine.Docx" Version="1.0.0" />
+    <PackageReference Include="FSharp.Core" Version="4.7.0" />
+    <PackageReference Include="FSharp.Data" Version="3.3.3" />
+    <Compile Include="*.fs" />
+  </ItemGroup>
+
+</Project>
