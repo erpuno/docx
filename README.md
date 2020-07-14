@@ -4,12 +4,12 @@
 
 The goal was to build simple command line DOCX template processor that can be used from other than .NET platforms.
 
-## Install .NET Core SDK 3.1.105
+## Install .NET Core SDK 3.1
 
 On Linix download `https://dot.net/v1/dotnet-install.sh` and then
 
 ```
-$ ./dotnet-install.sh -c Current
+$ ./dotnet-install.sh -c 3.1
 ```
 
 On Windows and Mac please refer to corresponding packages
