@@ -2,7 +2,7 @@
 
 rm -rf bin
 rm -rf obj
-dotnet build docx.fsproj
+dotnet build docx.sln
 cp Logo.jpg in.docx sample.csv bin/Debug/netcoreapp3.1
 cd bin/Debug/netcoreapp3.1
 ./docx -vars vector "Table" "sample.csv" , \
