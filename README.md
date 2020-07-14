@@ -29,6 +29,37 @@ Microsoft.NETCore.App 3.1.5 [/home/maxim/.dotnet/shared/Microsoft.NETCore.App]
 
 ## Compile and run
 
+Parameters are passed as command line arguments. Table fields are passed as CSV files.
+
+```
+$ cat firestarter.sh
+#!/bin/sh
+
+rm -rf bin
+rm -rf obj
+dotnet build docx.sln
+cp Logo.jpg in.docx sample.csv bin/Debug/netcoreapp3.1
+cd bin/Debug/netcoreapp3.1
+./docx -vars vector "Table" "sample.csv" , \
+             zimage "Logo" "Logo.jpg" , \
+             scalar "ReportDate" "12-22-2222" , \
+             scalar "Copyright" "SYNRC" , \
+             scalar 'CompanyName' "SYNRC" \
+      -in "in.docx" \
+      -out "out.docx"
+ls -l *.docx
+```
+
+```
+$ cat sample.csv
+Year,Brand,Model,Desc,Price
+1997,Ford,E350,"ac, abs, moon",3000.00
+1999,Chevy,"Venture ""Extended Edition""",,4900.00
+1996,Jeep,Grand Cherokee,"MUST SELL! air, moon roof, loaded",4799.00
+```
+
+During run you should get out.docx with substituted template parameters.
+
 ```
 $ dotnet build docx.sln
 $ ./firestarter
