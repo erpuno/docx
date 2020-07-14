@@ -4,7 +4,7 @@
 
 The goal was to build simple command line DOCX template processor that can be used from other than .NET platforms.
 
-## Install .NET Core SDK 3.1
+## Install .NET Core SDK LTS
 
 On Linix download `https://dot.net/v1/dotnet-install.sh` and then
 
