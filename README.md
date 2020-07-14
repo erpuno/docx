@@ -4,22 +4,28 @@
 
 Download `https://dot.net/v1/dotnet-install.sh` and then
 
-
+```
 $ ./dotnet-install.sh -c Current
+```
 
 Put into your `~/.profile` the following
 
+```
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH=$PATH:$HOME/.dotnet
+```
 
 With test
 
+```
 $ dotnet --list-runtimes
 Microsoft.AspNetCore.App 3.1.5 [/home/maxim/.dotnet/shared/Microsoft.AspNetCore.App]
 Microsoft.NETCore.App 3.1.5 [/home/maxim/.dotnet/shared/Microsoft.NETCore.App]
+```
 
 ## Compile and run
 
+```
 $ dotnet build docx.sln
 $ ./firestarter
 Microsoft (R) Build Engine version 16.6.0+5ff7b0c9e for .NET Core
