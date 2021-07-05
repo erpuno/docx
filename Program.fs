@@ -34,6 +34,7 @@ let table k (headers,rows) : TableContent =
 let field x =
     match x with
     | [|""; "scalar"; k; v; ""|] -> new FieldContent(k,v) :> IContentItem
+    | [|""; "base64"; k; v; ""|] -> new FieldContent(k, System.Text.Encoding.UTF8.GetString(Convert.FromBase64String(v))) :> IContentItem
     | [|""; "vector"; k; v; ""|] -> table k (read v) :> IContentItem
     | [|""; "zimage"; k; v; ""|] -> new ImageContent(k, File.ReadAllBytes(v)) :> IContentItem
     |                          _ -> new EmptyContent()    :> IContentItem
