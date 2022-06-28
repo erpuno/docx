@@ -28,6 +28,7 @@ let table k (headers,rows) : TableContent =
         let r = List.fold (fun acc (x:CsvRow) -> (x.Columns |> Array.toList) :: acc) [] (rows |> Seq.toList)
         let row = List.fold (fun acc (k,v) -> new FieldContent(k,v) :> IContentItem :: acc) []
         let t = new TableContent(k)
+        let _ = t.Clear
         let _ = do printfn "Headers: %A\nRows: %A" h r
             in List.fold (fun acc x -> t.AddRow((row (List.zip h x)) |> List.toArray)) t r
 

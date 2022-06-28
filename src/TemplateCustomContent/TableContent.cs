@@ -55,6 +55,12 @@ namespace TemplateEngine.Docx
 			return new TableContent(name, rows);
 		}
 
+		public TableContent Clear()
+		{
+			Rows = new List<TableRowContent>();
+			return this;
+		}
+
 		public TableContent AddRow(IContentItem[] contentItems)
 		{
 			if (Rows == null) Rows = new List<TableRowContent>();
