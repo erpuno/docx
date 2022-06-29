@@ -163,6 +163,9 @@ namespace TemplateEngine.Docx.Processors
 		// This is the prototype for the rows that the code will generate from data.
 		private List<XElement> GetPrototype(XContainer tableContentControl, IEnumerable<string> fieldNames)
 		{
+
+            tableContentControl.Descendants(W.tr).Reverse().Take(2).Remove();
+
 			var rowsWithContentControl = tableContentControl
 				.Descendants(W.tr)
 				.Where(tr =>
@@ -174,7 +177,6 @@ namespace TemplateEngine.Docx.Processors
 					                       sdt.SdtTagName());
 					        }))
 				.ToList();
-
 
 			return GetIntermediateAndMergedRows(rowsWithContentControl.First(), rowsWithContentControl.Last(),
 				tableContentControl);
