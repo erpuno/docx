@@ -164,7 +164,7 @@ namespace TemplateEngine.Docx.Processors
 		private List<XElement> GetPrototype(XContainer tableContentControl, IEnumerable<string> fieldNames)
 		{
 
-            tableContentControl.Descendants(W.tr).Reverse().Take(2).Remove();
+	                tableContentControl.Descendants(W.tr).Reverse().Take(tableContentControl.Descendants(W.tr).Count() - 2).Remove();
 
 			var rowsWithContentControl = tableContentControl
 				.Descendants(W.tr)
